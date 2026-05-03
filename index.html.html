@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoParts CL — Repuestos y Accesorios para Autos | Puerto Montt, Chile</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="qK6STUdQR9zAIeMlfheiDUNk_0JNnpQ7x9l2wBeedWk" />
+
+  <!-- SEO -->
+  <meta name="description" content="Catálogo de repuestos y accesorios para vehículos en Puerto Montt. Ópticos, neblineros, filtros, frenos, suspensión y más. Marcas: Toyota, Nissan, Mitsubishi, Suzuki, Hyundai, Kia, Chevrolet, VW, Opel. Envíos a todo Chile. Contacto por WhatsApp." />
+  <meta name="keywords" content="repuestos Puerto Montt, ópticos auto Puerto Montt, neblineros Puerto Montt, repuestos Toyota Puerto Montt, repuestos Hyundai Puerto Montt, repuestos Nissan Puerto Montt, repuestos Mitsubishi Puerto Montt, repuestos Kia Puerto Montt, accesorios auto Chile, filtros auto Puerto Montt, frenos Puerto Montt, suspensión auto Chile, repuestos usados Puerto Montt, autopartes Chile" />
+  <meta name="author" content="AutoParts CL" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://migueelsr.github.io/autopartscl/" />
+
+  <!-- Open Graph (para compartir en WhatsApp, Facebook, etc) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://migueelsr.github.io/autopartscl/" />
+  <meta property="og:title" content="AutoParts CL — Repuestos y Accesorios | Puerto Montt" />
+  <meta property="og:description" content="Encuentra ópticos, neblineros, filtros, frenos y más para tu vehículo. Todas las marcas. Envíos a todo Chile. Contacto directo por WhatsApp." />
+  <meta property="og:locale" content="es_CL" />
+
+  <!-- Twitter/X Card -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="AutoParts CL — Repuestos Puerto Montt" />
+  <meta name="twitter:description" content="Catálogo de repuestos y accesorios para autos. Puerto Montt. Envíos a todo Chile." />
+
+  <!-- Schema.org: datos estructurados para Google -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoPartsStore",
+    "name": "AutoParts CL",
+    "description": "Repuestos y accesorios para vehículos. Ópticos, neblineros, filtros, frenos, suspensión y más.",
+    "url": "https://migueelsr.github.io/autopartscl/",
+    "telephone": "+56949004897",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Puerto Montt",
+      "addressRegion": "Los Lagos",
+      "addressCountry": "CL"
+    },
+    "areaServed": "Chile",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+56949004897",
+      "contactType": "sales",
+      "availableLanguage": "Spanish"
+    }
+  }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #f7f6f3; --surface: #ffffff; --border: #e8e6e1;
+      --text: #1a1a18; --muted: #888882; --accent: #c8392b;
+      --shadow: 0 2px 12px rgba(0,0,0,0.07); --radius: 12px;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; }
+    header { background: var(--surface); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; }
+    .header-inner { max-width: 1100px; margin: 0 auto; padding: 0 24px; height: 64px; display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .logo { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: var(--text); letter-spacing: -0.5px; flex-shrink:0; }
+    .logo span { color: var(--accent); }
+    .header-right { display:flex; align-items:center; gap:12px; }
+    .header-sub { font-size: 0.75rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+    .admin-logout { display:none; align-items:center; gap:8px; font-size:0.75rem; color:var(--muted); cursor:pointer; padding:5px 12px; border:1px solid var(--border); border-radius:50px; background:var(--surface); font-family:'DM Sans',sans-serif; }
+    .admin-logout:hover { color:var(--accent); border-color:var(--accent); }
+    .hero-section { max-width:1100px; margin:0 auto; padding:48px 24px 40px; display:grid; grid-template-columns:1fr 320px; gap:40px; align-items:center; }
+    .hero-text h1 { font-family:'DM Serif Display',serif; font-size:clamp(2rem,4vw,3rem); line-height:1.1; letter-spacing:-1px; margin-bottom:14px; }
+    .hero-text p { color:var(--muted); font-size:1rem; font-weight:300; line-height:1.7; max-width:420px; margin-bottom:24px; }
+    .hero-badges { display:flex; gap:10px; flex-wrap:wrap; }
+    .badge { display:inline-flex; align-items:center; gap:6px; background:var(--surface); border:1px solid var(--border); border-radius:50px; padding:6px 14px; font-size:0.78rem; color:var(--muted); font-weight:500; }
+    .badge-dot { width:7px; height:7px; border-radius:50%; background:#2d8a4e; }
+    .hero-image-wrap { position:relative; border-radius:16px; overflow:hidden; height:380px; box-shadow:0 8px 32px rgba(0,0,0,0.12); flex-shrink:0; }
+    .hero-image-wrap img { width:100%; height:100%; object-fit:cover; object-position:center 60%; display:block; }
+    .hero-image-label { position:absolute; bottom:12px; left:12px; background:rgba(0,0,0,0.55); backdrop-filter:blur(6px); color:#fff; font-size:0.72rem; font-weight:500; padding:5px 12px; border-radius:50px; }
+
+    /* FILTROS */
+    .filters-bar { max-width:1100px; margin:0 auto 28px; padding:0 24px; display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    .filter-group { display:flex; flex-direction:column; gap:4px; }
+    .filter-group label { font-size:0.7rem; font-weight:600; color:var(--muted); text-transform:uppercase; letter-spacing:0.08em; }
+    .filter-select { padding:9px 14px; border:1.5px solid var(--border); border-radius:50px; font-family:'DM Sans',sans-serif; font-size:0.85rem; background:var(--surface); color:var(--text); outline:none; cursor:pointer; transition:border-color .2s; min-width:140px; appearance:none; background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23888' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat:no-repeat; background-position:right 12px center; padding-right:32px; }
+    .filter-select:focus { border-color:var(--accent); }
+    .filter-select.active { border-color:var(--accent); color:var(--accent); font-weight:600; }
+    .btn-clear-filters { padding:9px 16px; border:1.5px solid var(--border); border-radius:50px; font-family:'DM Sans',sans-serif; font-size:0.82rem; background:var(--surface); color:var(--muted); cursor:pointer; transition:all .18s; display:none; }
+    .btn-clear-filters:hover { border-color:var(--accent); color:var(--accent); }
+    .btn-clear-filters.visible { display:block; }
+    .active-filters { display:flex; gap:8px; flex-wrap:wrap; align-items:center; max-width:1100px; margin: -16px auto 20px; padding:0 24px; }
+    .filter-chip { display:inline-flex; align-items:center; gap:6px; background:var(--accent-light,#fdf1f0); border:1px solid #f5c6c3; color:var(--accent); border-radius:50px; padding:4px 12px; font-size:0.78rem; font-weight:500; }
+    .filter-chip button { background:none; border:none; color:var(--accent); cursor:pointer; font-size:0.9rem; padding:0; line-height:1; }
+
+    .search-bar { max-width:1100px; margin:0 auto 20px; padding:0 24px; }
+    .search-bar input { width:100%; max-width:420px; padding:12px 18px; border:1.5px solid var(--border); border-radius:50px; font-family:'DM Sans',sans-serif; font-size:0.9rem; background:var(--surface); color:var(--text); outline:none; transition:border-color .2s; }
+    .search-bar input:focus { border-color:var(--accent); }
+    .search-bar input::placeholder { color:var(--muted); }
+    main { max-width:1100px; margin:0 auto; padding:0 24px 80px; }
+    .category-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:40px; }
+    .tab-btn { padding:8px 18px; border-radius:50px; border:1.5px solid var(--border); background:var(--surface); color:var(--muted); font-family:'DM Sans',sans-serif; font-size:0.85rem; font-weight:500; cursor:pointer; transition:all .18s; }
+    .tab-btn:hover { border-color:var(--accent); color:var(--accent); }
+    .tab-btn.active { background:var(--accent); border-color:var(--accent); color:#fff; }
+    .category-section { margin-bottom:56px; }
+    .category-label { font-size:0.7rem; letter-spacing:0.14em; text-transform:uppercase; color:var(--muted); font-weight:600; margin-bottom:20px; padding-bottom:12px; border-bottom:1px solid var(--border); }
+    .product-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:18px; }
+    .product-card { background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; cursor:pointer; transition:box-shadow .2s,transform .2s; display:flex; flex-direction:column; }
+    .product-card:hover { box-shadow:var(--shadow); transform:translateY(-2px); }
+    .card-image { width:100%; aspect-ratio:4/3; background:var(--bg); display:flex; align-items:center; justify-content:center; border-bottom:1px solid var(--border); position:relative; overflow:hidden; }
+    .card-image img { width:100%; height:100%; object-fit:cover; }
+    .card-image .placeholder-icon { font-size:3rem; opacity:0.25; }
+    .badge-disponible { position:absolute; top:10px; right:10px; background:#2d8a4e; color:#fff; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:3px 9px; border-radius:50px; }
+    .badge-agotado { position:absolute; top:10px; right:10px; background:#888; color:#fff; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; padding:3px 9px; border-radius:50px; }
+    .card-body { padding:14px 16px; flex:1; display:flex; flex-direction:column; gap:4px; }
+    .card-name { font-weight:600; font-size:0.93rem; line-height:1.3; }
+    .card-meta { font-size:0.75rem; color:var(--muted); }
+    .card-price { font-weight:600; font-size:1rem; color:var(--accent); margin-top:4px; }
+    .card-qty { font-size:0.75rem; color:var(--muted); }
+    .card-footer { padding:10px 12px; border-top:1px solid var(--border); display:flex; gap:8px; }
+    .btn-whatsapp { display:flex; align-items:center; justify-content:center; gap:7px; flex:1; padding:9px; background:#25d366; color:#fff; border:none; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; cursor:pointer; text-decoration:none; transition:background .18s; }
+    .btn-whatsapp:hover { background:#1fb858; }
+    .btn-delete { display:flex; align-items:center; justify-content:center; width:36px; height:36px; background:#fff0f0; color:#c0392b; border:1px solid #fdd; border-radius:8px; cursor:pointer; font-size:0.9rem; flex-shrink:0; }
+    .btn-delete:hover { background:#fdd; }
+    .btn-edit { display:flex; align-items:center; justify-content:center; width:36px; height:36px; background:#f0f4ff; color:#2563eb; border:1px solid #d0dcff; border-radius:8px; cursor:pointer; font-size:0.85rem; flex-shrink:0; }
+    .btn-edit:hover { background:#dce8ff; }
+    .loading-state { text-align:center; padding:60px 20px; color:var(--muted); }
+    .spinner { width:36px; height:36px; border:3px solid var(--border); border-top-color:var(--accent); border-radius:50%; animation:spin .8s linear infinite; margin:0 auto 16px; }
+    @keyframes spin { to { transform:rotate(360deg); } }
+    .empty-state { text-align:center; padding:60px 20px; color:var(--muted); }
+    .empty-state p { margin-top:12px; font-size:0.9rem; }
+    .error-state { text-align:center; padding:40px 20px; color:var(--accent); font-size:0.9rem; }
+    .modal-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:200; display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; pointer-events:none; transition:opacity .2s; }
+    .modal-overlay.open { opacity:1; pointer-events:all; }
+    .modal { background:var(--surface); border-radius:16px; max-width:540px; width:100%; overflow:hidden; transform:translateY(20px); transition:transform .2s; max-height:90vh; overflow-y:auto; }
+    .modal-overlay.open .modal { transform:translateY(0); }
+    .modal-image { width:100%; aspect-ratio:16/9; background:var(--bg); display:flex; align-items:center; justify-content:center; font-size:4rem; color:var(--muted); position:relative; overflow:hidden; }
+    .modal-image img { width:100%; height:100%; object-fit:cover; }
+    .modal-close { position:absolute; top:12px; right:12px; width:32px; height:32px; background:rgba(255,255,255,0.9); border:none; border-radius:50%; cursor:pointer; font-size:1.1rem; display:flex; align-items:center; justify-content:center; color:var(--text); z-index:1; }
+    .modal-body { padding:24px; }
+    .modal-body h2 { font-family:'DM Serif Display',serif; font-size:1.6rem; margin-bottom:6px; }
+    .modal-meta { font-size:0.82rem; color:var(--muted); margin-bottom:6px; }
+    .modal-price { font-size:1.3rem; font-weight:600; color:var(--accent); margin-bottom:6px; }
+    .modal-qty { font-size:0.82rem; color:var(--muted); margin-bottom:16px; }
+    .modal-body .btn-whatsapp { font-size:1rem; padding:14px; width:100%; }
+    .confirm-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.4); z-index:300; display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; pointer-events:none; transition:opacity .15s; }
+    .confirm-overlay.open { opacity:1; pointer-events:all; }
+    .confirm-box { background:var(--surface); border-radius:14px; padding:28px 24px; max-width:320px; width:100%; text-align:center; }
+    .confirm-box h4 { font-size:1rem; font-weight:600; margin-bottom:8px; }
+    .confirm-box p { font-size:0.85rem; color:var(--muted); margin-bottom:20px; }
+    .confirm-actions { display:flex; gap:10px; }
+    .btn-cancel { flex:1; padding:10px; border:1.5px solid var(--border); background:var(--surface); border-radius:8px; font-family:'DM Sans',sans-serif; font-weight:500; cursor:pointer; }
+    .btn-confirm-del { flex:1; padding:10px; background:var(--accent); color:#fff; border:none; border-radius:8px; font-family:'DM Sans',sans-serif; font-weight:600; cursor:pointer; }
+    .login-overlay { position:fixed; inset:0; background:rgba(0,0,0,0.55); z-index:500; display:flex; align-items:center; justify-content:center; padding:20px; }
+    .login-box { background:var(--surface); border-radius:16px; padding:32px 28px; max-width:340px; width:100%; box-shadow:0 12px 40px rgba(0,0,0,0.2); }
+    .login-box h3 { font-family:'DM Serif Display',serif; font-size:1.4rem; margin-bottom:6px; }
+    .login-box p { font-size:0.82rem; color:var(--muted); margin-bottom:20px; }
+    .login-box input { width:100%; padding:11px 14px; border:1.5px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.9rem; background:var(--bg); color:var(--text); outline:none; margin-bottom:12px; transition:border-color .2s; }
+    .login-box input:focus { border-color:var(--accent); }
+    .login-box .btn-login { width:100%; padding:12px; background:var(--text); color:#fff; border:none; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:600; cursor:pointer; }
+    .login-error { font-size:0.8rem; color:var(--accent); margin-top:6px; display:none; }
+    .admin-toggle { position:fixed; bottom:24px; right:24px; width:52px; height:52px; background:var(--text); color:#fff; border:none; border-radius:50%; font-size:1.4rem; cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,0.2); z-index:150; transition:transform .2s; display:flex; align-items:center; justify-content:center; }
+    .admin-toggle:hover { transform:scale(1.08); }
+    .admin-panel { position:fixed; bottom:90px; right:24px; background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:20px; width:340px; box-shadow:0 8px 32px rgba(0,0,0,0.12); z-index:150; display:none; max-height:82vh; overflow-y:auto; }
+    .admin-panel.open { display:block; }
+    .admin-tabs { display:flex; gap:6px; margin-bottom:18px; }
+    .admin-tab { flex:1; padding:8px; border:1.5px solid var(--border); background:var(--bg); color:var(--muted); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:600; cursor:pointer; transition:all .18s; }
+    .admin-tab.active { background:var(--text); color:#fff; border-color:var(--text); }
+    .admin-panel label { display:block; font-size:0.8rem; color:var(--muted); margin-bottom:4px; font-weight:500; }
+    .admin-panel input, .admin-panel select, .admin-panel textarea { width:100%; padding:9px 12px; border:1.5px solid var(--border); border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.85rem; background:var(--bg); color:var(--text); outline:none; margin-bottom:10px; transition:border-color .2s; }
+    .admin-panel input:focus, .admin-panel select:focus, .admin-panel textarea:focus { border-color:var(--accent); }
+    .btn-add { width:100%; padding:11px; background:var(--accent); color:#fff; border:none; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:600; cursor:pointer; transition:background .18s; margin-top:4px; }
+    .btn-add:hover { background:#a82d22; }
+    .btn-add:disabled { background:#ccc; cursor:not-allowed; }
+    .admin-panel .note { font-size:0.72rem; color:var(--muted); margin-top:10px; text-align:center; line-height:1.5; }
+    .cat-tag { display:flex; align-items:center; justify-content:space-between; background:var(--bg); border:1px solid var(--border); border-radius:8px; padding:7px 12px; font-size:0.82rem; margin-bottom:6px; }
+    .cat-tag span { color:var(--text); font-weight:500; }
+    .cat-tag button { background:none; border:none; color:var(--muted); cursor:pointer; font-size:1rem; padding:0 2px; }
+    .cat-tag button:hover { color:var(--accent); }
+    .toast { position:fixed; bottom:90px; left:50%; transform:translateX(-50%) translateY(20px); background:#1a1a18; color:#fff; padding:10px 20px; border-radius:50px; font-size:0.85rem; font-weight:500; opacity:0; transition:all .3s; z-index:400; pointer-events:none; white-space:nowrap; }
+    .toast.show { opacity:1; transform:translateX(-50%) translateY(0); }
+    footer { border-top:1px solid var(--border); text-align:center; padding:28px; font-size:0.8rem; color:var(--muted); }
+    @media (max-width:720px) {
+      .hero-section { grid-template-columns:1fr; gap:28px; padding:32px 20px 28px; }
+      .hero-image-wrap { height:240px; }
+      .hero-text h1 { font-size:1.9rem; }
+      .header-sub { display:none; }
+      .filters-bar { gap:8px; }
+      .filter-select { min-width:120px; font-size:0.8rem; }
+    }
+    @media (max-width:600px) {
+      .product-grid { grid-template-columns:repeat(auto-fill,minmax(155px,1fr)); gap:12px; }
+      .admin-panel { width:calc(100vw - 32px); right:16px; }
+      .admin-toggle { right:16px; bottom:16px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="logo">Auto<span>Parts</span> CL</div>
+    <div class="header-right">
+      <div class="header-sub">Repuestos &amp; Accesorios</div>
+      <button class="admin-logout" id="logoutBtn" onclick="adminLogout()">🔒 Salir de admin</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero-section">
+  <div class="hero-text">
+    <h1>Catálogo de<br>Repuestos</h1>
+    <p>Encuentra lo que necesitas para tu vehículo. Contáctame directo por WhatsApp y coordinamos entrega o retiro.</p>
+    <div class="hero-badges">
+      <span class="badge"><span class="badge-dot"></span> Productos disponibles</span>
+      <span class="badge">📍 Puerto Montt, CL</span>
+      <span class="badge">💬 Respuesta rápida</span>
+    </div>
+  </div>
+  <div class="hero-image-wrap">
+    <img src="auto.jpg" alt="Mi vehiculo" />
+    <span class="hero-image-label">VW Golf · AutoParts CL</span>
+  </div>
+</div>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Buscar producto..." oninput="filterProducts()" />
+</div>
+
+<!-- FILTROS CATEGORÍA / MARCA / MODELO -->
+<div class="filters-bar">
+  <div class="filter-group">
+    <label>Categoría</label>
+    <select class="filter-select" id="filterCategoria" onchange="onCategoriaChange()">
+      <option value="">Todas las categorías</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label>Marca</label>
+    <select class="filter-select" id="filterMarca" onchange="onMarcaChange()">
+      <option value="">Todas las marcas</option>
+    </select>
+  </div>
+  <div class="filter-group">
+    <label>Modelo</label>
+    <select class="filter-select" id="filterModelo" onchange="onModeloChange()">
+      <option value="">Todos los modelos</option>
+    </select>
+  </div>
+  <div class="filter-group" style="justify-content:flex-end;">
+    <label>&nbsp;</label>
+    <button class="btn-clear-filters" id="btnClearFilters" onclick="clearFilters()">✕ Limpiar filtros</button>
+  </div>
+</div>
+
+<main>
+  <div class="category-tabs" id="categoryTabs"></div>
+  <div id="catalogContainer"><div class="loading-state"><div class="spinner"></div><p>Cargando productos...</p></div></div>
+  <div id="emptyState" class="empty-state" style="display:none;"><div style="font-size:2.5rem;">🔍</div><p>No se encontraron productos con ese filtro.</p></div>
+</main>
+
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnOverlay(event)">
+  <div class="modal">
+    <div class="modal-image" id="modalImage"><button class="modal-close" onclick="closeModal()">✕</button></div>
+    <div class="modal-body">
+      <h2 id="modalName"></h2>
+      <div class="modal-meta" id="modalMeta"></div>
+      <div class="modal-price" id="modalPrice"></div>
+      <div class="modal-qty" id="modalQty"></div>
+      <a id="modalWA" class="btn-whatsapp" href="#" target="_blank">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.549 4.122 1.504 5.865L0 24l6.335-1.482A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.002-1.371l-.359-.213-3.759.879.924-3.668-.234-.376A9.791 9.791 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.431 0 9.818 4.388 9.818 9.818 0 5.431-4.387 9.818-9.818 9.818z"/></svg>
+        Consultar por WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- EDIT MODAL -->
+<div class="modal-overlay" id="editOverlay" onclick="closeEditOnOverlay(event)" style="z-index:250;">
+  <div class="modal" style="max-width:460px;">
+    <div class="modal-body" style="padding:28px;">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;">
+        <h2 style="font-size:1.3rem;margin:0;">✏️ Editar Producto</h2>
+        <button onclick="closeEdit()" style="background:none;border:none;font-size:1.3rem;cursor:pointer;color:var(--muted);">✕</button>
+      </div>
+      <label style="display:block;font-size:0.8rem;color:var(--muted);font-weight:500;margin-bottom:4px;">Nombre</label>
+      <input type="text" id="editName" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:DM Sans,sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);outline:none;margin-bottom:10px;" />
+      <label style="display:block;font-size:0.8rem;color:var(--muted);font-weight:500;margin-bottom:4px;">Categoría</label>
+      <select id="editCategory" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:DM Sans,sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);outline:none;margin-bottom:10px;"></select>
+      <label style="display:block;font-size:0.8rem;color:var(--muted);font-weight:500;margin-bottom:4px;">Marca</label>
+      <input type="text" id="editMarca" placeholder="Toyota, Hyundai..." style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:DM Sans,sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);outline:none;margin-bottom:10px;" />
+      <label style="display:block;font-size:0.8rem;color:var(--muted);font-weight:500;margin-bottom:4px;">Modelo</label>
+      <input type="text" id="editModelo" placeholder="Corolla, Golf..." style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:DM Sans,sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);outline:none;margin-bottom:10px;" />
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+        <div>
+          <label style="display:block;font-size:0.8rem;color:var(--muted);font-weight:500;margin-bottom:4px;">Precio ($)</label>
+          <input type="number" id="editPrice" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:DM Sans,sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);outline:none;" />
+        </div>
+        <div>
+          <label style="display:block;font-size:0.8rem;color:var(--muted);font-weight:500;margin-bottom:4px;">Cantidad</label>
+          <input type="number" id="editQty" min="0" style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:DM Sans,sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);outline:none;" />
+        </div>
+      </div>
+      <label style="display:block;font-size:0.8rem;color:var(--muted);font-weight:500;margin:10px 0 4px;">URL de imagen</label>
+      <input type="text" id="editImage" placeholder="https://..." style="width:100%;padding:9px 12px;border:1.5px solid var(--border);border-radius:8px;font-family:DM Sans,sans-serif;font-size:0.85rem;background:var(--bg);color:var(--text);outline:none;margin-bottom:16px;" />
+      <button id="btnGuardarEdit" onclick="saveEdit()" style="width:100%;padding:12px;background:var(--accent);color:#fff;border:none;border-radius:8px;font-family:DM Sans,sans-serif;font-size:0.9rem;font-weight:600;cursor:pointer;">Guardar cambios</button>
+    </div>
+  </div>
+</div>
+
+<div class="confirm-overlay" id="confirmOverlay">
+  <div class="confirm-box">
+    <h4>Eliminar producto?</h4>
+    <p>Esta accion no se puede deshacer.</p>
+    <div class="confirm-actions">
+      <button class="btn-cancel" onclick="closeConfirm()">Cancelar</button>
+      <button class="btn-confirm-del" onclick="confirmDelete()">Eliminar</button>
+    </div>
+  </div>
+</div>
+
+<div class="login-overlay" id="loginOverlay" style="display:none;" onclick="closeLoginOnOverlay(event)">
+  <div class="login-box" style="position:relative;">
+    <button onclick="closeLogin()" style="position:absolute;top:12px;right:12px;background:none;border:none;font-size:1.2rem;cursor:pointer;color:var(--muted);line-height:1;">✕</button>
+    <h3>Acceso Admin</h3>
+    <p>Ingresa la contraseña para gestionar el catalogo.</p>
+    <input type="password" id="adminPassword" placeholder="Contraseña" onkeydown="if(event.key==='Enter')checkPassword()" />
+    <button class="btn-login" onclick="checkPassword()">Entrar</button>
+    <div class="login-error" id="loginError">Contraseña incorrecta.</div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<button class="admin-toggle" onclick="toggleAdmin()">＋</button>
+
+<div class="admin-panel" id="adminPanel">
+  <div class="admin-tabs">
+    <button class="admin-tab active" id="tabProducto" onclick="switchTab('producto')">➕ Producto</button>
+    <button class="admin-tab" id="tabCategorias" onclick="switchTab('categorias')">🗂 Categorias</button>
+  </div>
+  <div id="panelProducto">
+    <label>Nombre del producto</label>
+    <input type="text" id="newName" placeholder="Ej: Foco H4 60/55W" />
+    <label>Categoria</label>
+    <select id="newCategory"></select>
+    <label>Marca compatible (ej: Toyota)</label>
+    <input type="text" id="newMarca" placeholder="Toyota, Hyundai, VW..." />
+    <label>Modelo compatible (ej: Corolla)</label>
+    <input type="text" id="newModelo" placeholder="Corolla, Tucson, Golf..." />
+    <label>Precio</label>
+    <input type="number" id="newPrice" placeholder="12990" />
+    <label>Cantidad</label>
+    <input type="number" id="newQty" placeholder="1" value="1" min="0" />
+    <label>URL de imagen (opcional)</label>
+    <input type="text" id="newImage" placeholder="https://..." />
+    <button class="btn-add" id="btnAgregar" onclick="addProduct()">Agregar al catalogo</button>
+    <p class="note">Los productos se sincronizan en tiempo real.</p>
+  </div>
+  <div id="panelCategorias" style="display:none;">
+    <div style="display:flex;gap:8px;margin-bottom:12px;">
+      <input type="text" id="newCatName" placeholder="Nueva categoria..." style="margin-bottom:0;flex:1;" onkeydown="if(event.key==='Enter')addCategory()" />
+      <button onclick="addCategory()" style="padding:9px 14px;background:var(--text);color:#fff;border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-weight:600;cursor:pointer;font-size:0.82rem;">+ Anadir</button>
+    </div>
+    <div id="catList"></div>
+    <p class="note" style="margin-top:8px;">Las categorias se guardan localmente.</p>
+  </div>
+</div>
+
+<footer>© 2025 AutoParts CL · Puerto Montt, Chile · Todos los derechos reservados</footer>
+
+<script>
+var WA = '56949004897';
+var ADMIN_PASS = '1964';
+var SB_URL = 'https://ekvixshuqsnfxlbimebg.supabase.co/rest/v1';
+var SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVrdml4c2h1cXNuZnhsYmltZWJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzY4NzQzNzgsImV4cCI6MjA5MjQ1MDM3OH0.3LPogipu7wnalwc8kBYmFTe10lmLPExsCPGCbUFVIbs';
+
+var isAdmin = false;
+var products = [];
+var currentCategory = 'Todos';
+var currentMarca = '';
+var currentModelo = '';
+var pendingDeleteId = null;
+
+var ICONS = {'Iluminacion':'💡','Accesorios':'🔧','Filtros':'🌀','Suspension':'⚙️','Frenos':'🛑','Opticos':'🔦','Neblineros':'🌫️','Otros':'📦'};
+var DEFAULT_CATS = ['Opticos','Neblineros','Iluminacion','Accesorios','Filtros','Suspension','Frenos','Otros'];
+var categories = JSON.parse(localStorage.getItem('ap_categories') || 'null') || DEFAULT_CATS.slice();
+function saveCats() { localStorage.setItem('ap_categories', JSON.stringify(categories)); }
+
+// SUPABASE
+async function sbFetch(path, opts) {
+  var headers = { 'apikey': SB_KEY, 'Authorization': 'Bearer ' + SB_KEY, 'Content-Type': 'application/json' };
+  if (opts && opts.method === 'POST') headers['Prefer'] = 'return=representation';
+  if (opts && opts.method === 'DELETE') headers['Prefer'] = 'return=minimal';
+  if (opts && opts.method === 'PATCH') headers['Prefer'] = 'return=representation';
+  var res = await fetch(SB_URL + path, Object.assign({ headers: headers }, opts || {}));
+  if (!res.ok) {
+    var errText = await res.text();
+    throw new Error(errText);
+  }
+  if (res.status === 204) return null;
+  var text = await res.text();
+  return text ? JSON.parse(text) : null;
+}
+
+async function loadProducts() {
+  document.getElementById('catalogContainer').innerHTML = '<div class="loading-state"><div class="spinner"></div><p>Cargando productos...</p></div>';
+  try {
+    var data = await sbFetch('/productos?select=*&order=id.asc');
+    products = data || [];
+    renderAll();
+  } catch(e) {
+    document.getElementById('catalogContainer').innerHTML = '<div class="error-state">Error al cargar. Revisa la conexion.</div>';
+  }
+}
+
+async function addProduct() {
+  var name  = document.getElementById('newName').value.trim();
+  var cat   = document.getElementById('newCategory').value;
+  var marca = document.getElementById('newMarca').value.trim();
+  var modelo= document.getElementById('newModelo').value.trim();
+  var price = parseInt(document.getElementById('newPrice').value) || 0;
+  var qty   = parseInt(document.getElementById('newQty').value) || 1;
+  var img   = document.getElementById('newImage').value.trim();
+  if (!name || !price) { alert('Completa nombre y precio.'); return; }
+  var btn = document.getElementById('btnAgregar');
+  btn.disabled = true; btn.textContent = 'Guardando...';
+  try {
+    await sbFetch('/productos', { method: 'POST', body: JSON.stringify({ nombre: name, categoria: cat, marca: marca||null, modelo: modelo||null, valor: price, cantidad: qty, imagen_url: img||null }) });
+    ['newName','newMarca','newModelo','newPrice','newImage'].forEach(function(id){ document.getElementById(id).value=''; });
+    document.getElementById('newQty').value = '1';
+    document.getElementById('adminPanel').classList.remove('open');
+    showToast('Producto agregado');
+    await loadProducts();
+  } catch(e) { alert('Error: ' + e.message); }
+  finally { btn.disabled = false; btn.textContent = 'Agregar al catalogo'; }
+}
+
+async function deleteProduct(id) {
+  var cleanId = parseInt(id);
+  if (!cleanId || isNaN(cleanId)) { alert('Error: ID invalido: ' + id); return; }
+  try {
+    await sbFetch('/productos?id=eq.' + cleanId, { method: 'DELETE' });
+    showToast('Producto eliminado');
+    await loadProducts();
+  } catch(e) { alert('Error: ' + e.message); }
+}
+
+// FILTROS
+function getFilteredProducts() {
+  return products.filter(function(p) {
+    var matchCat    = currentCategory === 'Todos' || p.categoria === currentCategory;
+    var matchMarca  = !currentMarca  || (p.marca||'').toLowerCase() === currentMarca.toLowerCase();
+    var matchModelo = !currentModelo || (p.modelo||'').toLowerCase() === currentModelo.toLowerCase();
+    var search = document.getElementById('searchInput').value.toLowerCase();
+    var matchSearch = !search || (p.nombre||'').toLowerCase().indexOf(search) !== -1;
+    return matchCat && matchMarca && matchModelo && matchSearch;
+  });
+}
+
+function getUnique(field) {
+  var vals = [];
+  for (var i=0; i<products.length; i++) {
+    var v = (products[i][field]||'').trim();
+    if (v && vals.indexOf(v) === -1) vals.push(v);
+  }
+  return vals.sort();
+}
+
+function updateMarcaFilter() {
+  var marcas = getUnique('marca');
+  var sel = document.getElementById('filterMarca');
+  var cur = sel.value;
+  sel.innerHTML = '<option value="">Todas las marcas</option>';
+  for (var i=0; i<marcas.length; i++) sel.innerHTML += '<option value="' + marcas[i] + '">' + marcas[i] + '</option>';
+  sel.value = cur;
+  sel.className = cur ? 'filter-select active' : 'filter-select';
+}
+
+function updateModeloFilter() {
+  var sel = document.getElementById('filterModelo');
+  // Filter modelos based on selected marca
+  var modelos = [];
+  for (var i=0; i<products.length; i++) {
+    var p = products[i];
+    var m = (p.modelo||'').trim();
+    if (!m) continue;
+    if (currentMarca && (p.marca||'').toLowerCase() !== currentMarca.toLowerCase()) continue;
+    if (modelos.indexOf(m) === -1) modelos.push(m);
+  }
+  modelos.sort();
+  var cur = sel.value;
+  sel.innerHTML = '<option value="">Todos los modelos</option>';
+  for (var i=0; i<modelos.length; i++) sel.innerHTML += '<option value="' + modelos[i] + '">' + modelos[i] + '</option>';
+  if (modelos.indexOf(cur) !== -1) sel.value = cur; else { sel.value = ''; currentModelo = ''; }
+  sel.className = sel.value ? 'filter-select active' : 'filter-select';
+}
+
+function onMarcaChange() {
+  currentMarca = document.getElementById('filterMarca').value;
+  currentModelo = '';
+  document.getElementById('filterMarca').className = currentMarca ? 'filter-select active' : 'filter-select';
+  updateModeloFilter();
+  updateClearBtn();
+  renderCatalog();
+}
+
+function onModeloChange() {
+  currentModelo = document.getElementById('filterModelo').value;
+  document.getElementById('filterModelo').className = currentModelo ? 'filter-select active' : 'filter-select';
+  updateClearBtn();
+  renderCatalog();
+}
+
+function updateClearBtn() {
+  var btn = document.getElementById('btnClearFilters');
+  if (currentMarca || currentModelo || currentCategory!=='Todos') btn.classList.add('visible');
+  else btn.classList.remove('visible');
+}
+
+function clearFilters() {
+  currentMarca = ''; currentModelo = ''; currentCategory = 'Todos';
+  document.getElementById('filterMarca').value = '';
+  document.getElementById('filterModelo').value = '';
+  document.getElementById('filterCategoria').value = '';
+  document.getElementById('filterMarca').className = 'filter-select';
+  document.getElementById('filterModelo').className = 'filter-select';
+  document.getElementById('filterCategoria').className = 'filter-select';
+  updateClearBtn();
+  renderTabs('Todos');
+  renderCatalog();
+}
+
+function getCategories() {
+  var filtered = getFilteredProducts();
+  return categories.filter(function(c) { return filtered.some(function(p) { return p.categoria === c; }); });
+}
+
+function renderAll() {
+  updateCategoriaFilter();
+  updateMarcaFilter();
+  updateModeloFilter();
+  renderCategorySelect();
+  renderTabs(currentCategory);
+  renderCatalog();
+}
+
+function renderTabs(active) {
+  var cats = ['Todos'].concat(getCategories());
+  var html = '';
+  for (var i=0; i<cats.length; i++) {
+    var c = cats[i];
+    var cls = c === active ? 'tab-btn active' : 'tab-btn';
+    html += '<button class="' + cls + '" data-cat="' + c + '" onclick="filterByCategory(this.dataset.cat)">' + c + '</button>';
+  }
+  document.getElementById('categoryTabs').innerHTML = html;
+}
+
+function renderCatalog() {
+  var container = document.getElementById('catalogContainer');
+  var search = document.getElementById('searchInput').value.toLowerCase();
+  var filtered = getFilteredProducts();
+  var cats = currentCategory === 'Todos'
+    ? categories.filter(function(c){ return filtered.some(function(p){ return p.categoria===c; }); })
+    : [currentCategory];
+  var anyVisible = false;
+  var html = '';
+  for (var i=0; i<cats.length; i++) {
+    var cat = cats[i];
+    var items = filtered.filter(function(p){ return p.categoria === cat; });
+    if (!items.length) continue;
+    anyVisible = true;
+    html += '<div class="category-section">';
+    html += '<div class="category-label">' + (ICONS[cat]||'📦') + ' &nbsp; ' + cat + '</div>';
+    html += '<div class="product-grid">';
+    for (var j=0; j<items.length; j++) html += cardHTML(items[j]);
+    html += '</div></div>';
+  }
+  container.innerHTML = html;
+  document.getElementById('emptyState').style.display = anyVisible ? 'none' : 'block';
+}
+
+function cardHTML(p) {
+  var stock = (p.cantidad > 0) ? '<span class="badge-disponible">Disponible</span>' : '<span class="badge-agotado">Agotado</span>';
+  var imgHTML = p.imagen_url ? '<img src="' + p.imagen_url + '" alt="" onerror="this.style.display=\'none\'" />' : '<span class="placeholder-icon">' + (ICONS[p.categoria]||'📦') + '</span>';
+  var price = p.valor ? '$' + parseInt(p.valor).toLocaleString('es-CL') : 'Consultar';
+  var meta = '';
+  if (p.marca || p.modelo) meta = '<div class="card-meta">' + [p.marca, p.modelo].filter(Boolean).join(' · ') + '</div>';
+  var delBtn = '';
+  var editBtn = '';
+  if (isAdmin) {
+    editBtn = '<button class="btn-edit" onclick="event.stopPropagation();openEdit(' + p.id + ')" title="Editar">✏️</button>';
+    delBtn  = '<button class="btn-delete" onclick="event.stopPropagation();askDelete(' + p.id + ')" title="Eliminar">🗑</button>';
+  }
+  return '<div class="product-card" data-id="' + p.id + '" onclick="openModal(parseInt(this.dataset.id))">' +
+    '<div class="card-image">' + imgHTML + stock + '</div>' +
+    '<div class="card-body">' +
+    '<div class="card-name">' + (p.nombre||'Sin nombre') + '</div>' + meta +
+    '<div class="card-price">' + price + '</div>' +
+    (p.cantidad > 1 ? '<div class="card-qty">Stock: ' + p.cantidad + ' uds.</div>' : '') +
+    '</div>' +
+    '<div class="card-footer">' +
+    '<a class="btn-whatsapp" href="' + waLink(p) + '" target="_blank" onclick="event.stopPropagation()">' + waSVG(16) + ' WhatsApp</a>' +
+    editBtn + delBtn + '</div></div>';
+}
+
+function waLink(p) {
+  var price = p.valor ? '$' + parseInt(p.valor).toLocaleString('es-CL') : '';
+  var extra = [p.marca, p.modelo].filter(Boolean).join(' ');
+  var msg = encodeURIComponent('Hola! Me interesa: *' + (p.nombre||'') + (extra?' ('+extra+')':'') + '* ' + price + '. Esta disponible?');
+  return 'https://wa.me/' + WA + '?text=' + msg;
+}
+
+function waSVG(s) {
+  return '<svg width="' + s + '" height="' + s + '" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.549 4.122 1.504 5.865L0 24l6.335-1.482A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.79 9.79 0 01-5.002-1.371l-.359-.213-3.759.879.924-3.668-.234-.376A9.791 9.791 0 012.182 12C2.182 6.57 6.57 2.182 12 2.182c5.431 0 9.818 4.388 9.818 9.818 0 5.431-4.387 9.818-9.818 9.818z"/></svg>';
+}
+
+function filterByCategory(cat) { currentCategory = cat; renderTabs(cat); renderCatalog(); }
+function filterProducts() { renderCatalog(); }
+
+function openModal(id) {
+  var p = products.find(function(x){ return x.id===id; });
+  if (!p) return;
+  var mi = document.getElementById('modalImage');
+  mi.innerHTML = '<button class="modal-close" onclick="closeModal()">✕</button>';
+  if (p.imagen_url) {
+    var img = document.createElement('img'); img.src=p.imagen_url; img.alt=p.nombre||'';
+    img.onerror = function(){ img.remove(); mi.innerHTML += '<span style="font-size:4rem;opacity:.3">'+(ICONS[p.categoria]||'📦')+'</span>'; };
+    mi.appendChild(img);
+  } else { mi.innerHTML += '<span style="font-size:4rem;opacity:.3">'+(ICONS[p.categoria]||'📦')+'</span>'; }
+  var price = p.valor ? '$' + parseInt(p.valor).toLocaleString('es-CL') : 'Consultar precio';
+  var meta = [p.marca, p.modelo].filter(Boolean).join(' · ');
+  document.getElementById('modalName').textContent = p.nombre||'';
+  document.getElementById('modalMeta').textContent = meta;
+  document.getElementById('modalPrice').textContent = price;
+  document.getElementById('modalQty').textContent = p.cantidad>0 ? 'Stock: '+p.cantidad+' unidad(es)' : 'Sin stock';
+  document.getElementById('modalWA').href = waLink(p);
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeModal(){ document.getElementById('modalOverlay').classList.remove('open'); document.body.style.overflow=''; }
+function closeModalOnOverlay(e){ if(e.target===document.getElementById('modalOverlay')) closeModal(); }
+
+function askDelete(id){ pendingDeleteId=id; document.getElementById('confirmOverlay').classList.add('open'); }
+function closeConfirm(){ document.getElementById('confirmOverlay').classList.remove('open'); pendingDeleteId=null; }
+function confirmDelete(){ if(!pendingDeleteId) return; var idToDelete=pendingDeleteId; closeConfirm(); deleteProduct(idToDelete); }
+
+function closeLogin(){
+  document.getElementById('loginOverlay').style.display='none';
+  document.getElementById('adminPassword').value='';
+  document.getElementById('loginError').style.display='none';
+}
+function closeLoginOnOverlay(e){ if(e.target===document.getElementById('loginOverlay')) closeLogin(); }
+
+function onCategoriaChange(){
+  currentCategory = document.getElementById('filterCategoria').value || 'Todos';
+  document.getElementById('filterCategoria').className = (currentCategory!=='Todos') ? 'filter-select active' : 'filter-select';
+  currentMarca=''; currentModelo='';
+  document.getElementById('filterMarca').value='';
+  document.getElementById('filterModelo').value='';
+  document.getElementById('filterMarca').className='filter-select';
+  document.getElementById('filterModelo').className='filter-select';
+  updateMarcaFilter(); updateModeloFilter(); updateClearBtn(); renderTabs(currentCategory); renderCatalog();
+}
+
+function updateCategoriaFilter(){
+  var sel = document.getElementById('filterCategoria');
+  var cur = sel.value;
+  sel.innerHTML = '<option value="">Todas las categorías</option>';
+  for(var i=0;i<categories.length;i++){
+    if(products.some(function(p){ return p.categoria===categories[i]; }))
+      sel.innerHTML += '<option value="'+categories[i]+'">'+categories[i]+'</option>';
+  }
+  if(cur) sel.value = cur;
+  sel.className = sel.value ? 'filter-select active' : 'filter-select';
+}
+
+function checkPassword(){
+  if(document.getElementById('adminPassword').value===ADMIN_PASS){
+    isAdmin=true;
+    document.getElementById('loginOverlay').style.display='none';
+    document.getElementById('adminPanel').classList.add('open');
+    document.getElementById('logoutBtn').style.display='flex';
+    document.getElementById('adminPassword').value='';
+    renderAll();
+  } else { document.getElementById('loginError').style.display='block'; }
+}
+function adminLogout(){
+  isAdmin=false;
+  document.getElementById('logoutBtn').style.display='none';
+  document.getElementById('adminPanel').classList.remove('open');
+  renderAll();
+}
+function toggleAdmin(){
+  if(!isAdmin){ document.getElementById('loginOverlay').style.display='flex'; setTimeout(function(){ document.getElementById('adminPassword').focus(); },100); }
+  else { document.getElementById('adminPanel').classList.toggle('open'); }
+}
+
+function switchTab(tab){
+  document.getElementById('panelProducto').style.display = tab==='producto'?'block':'none';
+  document.getElementById('panelCategorias').style.display = tab==='categorias'?'block':'none';
+  document.getElementById('tabProducto').classList.toggle('active',tab==='producto');
+  document.getElementById('tabCategorias').classList.toggle('active',tab==='categorias');
+  if(tab==='categorias') renderCatList();
+}
+
+function renderCategorySelect(){
+  var sel=document.getElementById('newCategory'); var html='';
+  for(var i=0;i<categories.length;i++) html+='<option value="'+categories[i]+'">'+categories[i]+'</option>';
+  sel.innerHTML=html;
+}
+function renderCatList(){
+  var list=document.getElementById('catList'); if(!list) return;
+  if(!categories.length){ list.innerHTML='<p style="font-size:.78rem;color:var(--muted);text-align:center;">Sin categorias.</p>'; return; }
+  var html='';
+  for(var i=0;i<categories.length;i++) html+='<div class="cat-tag"><span>'+(ICONS[categories[i]]||'📦')+' '+categories[i]+'</span><button onclick="deleteCategory('+i+')">✕</button></div>';
+  list.innerHTML=html;
+}
+function addCategory(){
+  var input=document.getElementById('newCatName'); var name=input.value.trim();
+  if(!name) return;
+  if(categories.indexOf(name)!==-1){ alert('Ya existe.'); return; }
+  categories.push(name); saveCats(); input.value='';
+  renderCategorySelect(); renderCatList();
+}
+function deleteCategory(idx){
+  var cat=categories[idx];
+  if(products.some(function(p){ return p.categoria===cat; })){
+    if(!confirm('La categoria "'+cat+'" tiene productos. Eliminar igual?')) return;
+  }
+  categories.splice(idx,1); saveCats();
+  renderCategorySelect(); renderCatList();
+  renderTabs(currentCategory); renderCatalog();
+}
+
+var editingId = null;
+
+function openEdit(id) {
+  var p = products.find(function(x){ return x.id===id; });
+  if (!p) return;
+  editingId = id;
+  document.getElementById('editName').value  = p.nombre || '';
+  document.getElementById('editMarca').value = p.marca  || '';
+  document.getElementById('editModelo').value= p.modelo || '';
+  document.getElementById('editPrice').value = p.valor  || '';
+  document.getElementById('editQty').value   = p.cantidad !== undefined ? p.cantidad : 1;
+  document.getElementById('editImage').value = p.imagen_url || '';
+  // Populate category select
+  var sel = document.getElementById('editCategory');
+  sel.innerHTML = '';
+  for (var i=0;i<categories.length;i++) sel.innerHTML += '<option value="'+categories[i]+'">'+ categories[i]+'</option>';
+  sel.value = p.categoria || categories[0];
+  document.getElementById('editOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+
+function closeEdit() {
+  document.getElementById('editOverlay').classList.remove('open');
+  document.body.style.overflow='';
+  editingId=null;
+}
+function closeEditOnOverlay(e){ if(e.target===document.getElementById('editOverlay')) closeEdit(); }
+
+async function saveEdit() {
+  if (!editingId) return;
+  var name  = document.getElementById('editName').value.trim();
+  var cat   = document.getElementById('editCategory').value;
+  var marca = document.getElementById('editMarca').value.trim();
+  var modelo= document.getElementById('editModelo').value.trim();
+  var price = parseInt(document.getElementById('editPrice').value) || 0;
+  var qty   = parseInt(document.getElementById('editQty').value);
+  var img   = document.getElementById('editImage').value.trim();
+  if (!name || !price) { alert('Nombre y precio son obligatorios.'); return; }
+  var btn = document.getElementById('btnGuardarEdit');
+  btn.disabled=true; btn.textContent='Guardando...';
+  try {
+    await sbFetch('/productos?id=eq.' + editingId, {
+      method: 'PATCH',
+      body: JSON.stringify({ nombre: name, categoria: cat, marca: marca||null, modelo: modelo||null, valor: price, cantidad: qty, imagen_url: img||null })
+    });
+    closeEdit();
+    showToast('Producto actualizado');
+    await loadProducts();
+  } catch(e) { alert('Error: ' + e.message); }
+  finally { btn.disabled=false; btn.textContent='Guardar cambios'; }
+}
+
+function showToast(msg){ var t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show'); setTimeout(function(){ t.classList.remove('show'); },2500); }
+
+document.addEventListener('keydown',function(e){ if(e.key==='Escape'){ closeModal(); closeConfirm(); closeLogin(); closeEdit(); } });
+
+loadProducts();
+
+</script>
+</body>
+</html>
